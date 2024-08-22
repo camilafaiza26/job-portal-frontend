@@ -4,7 +4,6 @@ import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
 import routes from '../routes'
-
 const AppContent = () => {
   return (
     <CContainer className="px-4" lg>
@@ -23,11 +22,10 @@ const AppContent = () => {
               )
             )
           })}
-          <Route path="/" element={<Navigate to="dashboard" replace />} />
+          <Route path="/admin/" element={<Navigate to="/admin/dashboard/" replace />} />
         </Routes>
       </Suspense>
     </CContainer>
   )
 }
-
 export default React.memo(AppContent)
